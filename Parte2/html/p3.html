@@ -121,36 +121,37 @@ document.getElementById("myBtn").addEventListener("click", function() {<br>
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div style="bg-black" class="col-lg-6">&lt;!DOCTYPE html&gt;<br>
+&lt;!DOCTYPE html&gt;<br>
 &lt;html&gt;<br>
-&lt;body onload="checkCookies()"&gt;<br>
+&lt;body&gt;<br>
 
-&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
+&lt;h2&gt;JavaScript addEventListener()&lt;/h2&gt;<br>
+
+&lt;p&gt;This example uses the addEventListener() method on the window object.&lt;/p&gt;<br>
+
+&lt;p&gt;Try resizing this browser window to trigger the "resize" event handler.&lt;/p&gt;<br>
 
 &lt;p id="demo"&gt;&lt;/p&gt;<br>
 
 &lt;script&gt;<br>
-function checkCookies() {<br>
-  var text = "";<br>
-  if (navigator.cookieEnabled == true) {<br>
-    text = "Cookies are enabled.";<br>
-  } else {<br>
-    text = "Cookies are not enabled.";<br>
-  }<br>
-  document.getElementById("demo").innerHTML = text;<br>
-}<br>
+window.addEventListener("resize", function(){<br>
+  document.getElementById("demo").innerHTML = Math.random();<br>
+});<br>
 &lt;/script&gt;<br>
 
 &lt;/body&gt;<br>
-&lt;/html&gt; <br>
+&lt;/html&gt;<br>
+
 </div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Los eventos onload y onunload</h4>
-                                    <p class="mb-0 text-white-50">Los eventos onloady onunloadse activan cuando el usuario entra o sale de la página.<br>
+                                    <h4 class="text-white">Agregue un controlador de eventos al objeto de la ventana</h4>
+                                    <p class="mb-0 text-white-50">El addEventListener()método le permite agregar detectores de eventos en cualquier objeto HTML DOM, como elementos HTML, el documento HTML, el objeto de ventana u otros objetos que admitan eventos, como el xmlHttpRequestobjeto.<br>
 
-El onloadevento se puede utilizar para comprobar el tipo de navegador y la versión del navegador del visitante, y cargar la versión adecuada de la página web en función de la información.<br>
+EEjemplo
+Agregue un detector de eventos que se activa cuando un usuario cambia el tamaño de la ventana:<br>
 
 Los eventos onloady onunloadse pueden utilizar para tratar con las cookies.</p>
 <h2>COPIE EL CODIGO HE INTENTELO USTED MISMO</h2>
@@ -166,35 +167,70 @@ Los eventos onloady onunloadse pueden utilizar para tratar con las cookies.</p>
                 <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6">&lt;!DOCTYPE html&gt;<br>
+&lt;!DOCTYPE html&gt;<br>
 &lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;style&gt;<br>
+Div1{<br>
+  background-color: coral;<br>
+  padding: 50px;<br>
+}<br>
+
+P1{<br>
+  background-color: white; <br>
+  font-size: 20px;<br>
+  border: 1px solid;<br>
+  padding: 20px;<br>
+}
+&lt;/style&gt;<br>
+&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>
+&lt;/head&gt;<br>
 &lt;body&gt;<br>
 
-&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
-Enter your name: &lt;input type="text" id="fname" onchange="upperCase()"&gt;<br>
-&lt;p&gt;When you leave the input field, a function is triggered which transforms the input text to upper case.&lt;/p&gt;<br>
+&lt;h2&gt;JavaScript addEventListener()&lt;/h2&gt;<br>
+
+&lt;Div1&gt;<br>
+  &lt;h2&gt;Bubbling:&lt;/h2&gt;<br>
+  &lt;P1&gt;Click me!&lt;/P1&gt;<br>
+&lt;/Div1&gt;&lt;br&gt;
+<br>
+&lt;Div1&gt;<br>
+  &lt;h2&gt;Capturing:&lt;/h2&gt;<br>
+  &lt;P1&gt;Click me!&lt;/P1&gt;<br>
+&lt;/Div1&gt;<br>
 
 &lt;script&gt;<br>
-function upperCase() {<br>
-  const x = document.getElementById("fname");<br>
-  x.value = x.value.toUpperCase();<br>
-}<br>
+document.getElementById("P1").addEventListener("click", function() {<br>
+  alert("You clicked the white element!");<br>
+}, false);<br>
+
+document.getElementById("Div1").addEventListener("click", function() {<br>
+  alert("You clicked the orange element!");<br>
+}, false);<br>
+
+document.getElementById("P1").addEventListener("click", function() {<br>
+  alert("You clicked the white element!");<br>
+}, true);<br>
+
+document.getElementById("Div1").addEventListener("click", function() {<br>
+  alert("You clicked the orange element!");<br>
+}, true);<br>
 &lt;/script&gt;<br>
 
 &lt;/body&gt;<br>
 &lt;/html&gt;<br>
+
+            
 
 </div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">El evento onchange</h4>
+                                    <h4 class="text-white">¿Burbujeo de eventos o captura de eventos?</h4>
                                     <p class="mb-0 text-white-50" align="center">
-                                        El onchangeevento se usa a menudo en combinación con la validación de campos de entrada.
-
-A continuación se muestra un ejemplo de cómo utilizar onchange. La upperCase() función se llamará cuando un usuario cambie el contenido de un campo de entrada.
-
-Ejemplo
+                                        La propagación de eventos es una forma de definir el orden de los elementos cuando ocurre un evento. Si tiene un elemento &ltp&gt dentro de un elemento &ltdiv&gt y el usuario hace clic en el elemento &ltp&gt, ¿qué evento de "clic" de elemento debe manejarse primero?<br>
+                                        Al capturar el evento del elemento más externo se maneja primero y luego el interno: el evento de clic del elemento &ltdiv&gt se manejará primero, luego el evento de clic del elemento <p>.
                                     </p>
                                    
  <a href="tri2/index.html">

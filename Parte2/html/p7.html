@@ -80,27 +80,21 @@
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-2 mb-lg-4 align-items-center">
                     <div class="col-xl-8 col-lg-7">
-                        &lt;!DOCTYPE html&gt;
-&lt;html&gt; <br>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
 &lt;body&gt;<br>
 
-&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
-&lt;p&gt;Click "Try it" to execute the displayDate() function.&lt;/p&gt;<br>
-
-&lt;button id="myBtn"&gt;Try it&lt;/button&gt;<br>
-
-&lt;p id="demo"&gt;&lt;/p&gt;<br>
+&lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;<br>
+&lt;p id="id02"&gt;&lt;/p&gt;<br>
 
 &lt;script&gt;<br>
-document.getElementById("myBtn").onclick = displayDate;<br>
-
-function displayDate() {<br>
-  document.getElementById("demo").innerHTML = Date();<br>
-}<br>
+document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType;
 &lt;/script&gt;<br>
 
 &lt;/body&gt;<br>
-&lt;/html&gt; <br>
+&lt;/html&gt;<br>
+
+
 
 
                     </div>
@@ -120,36 +114,18 @@ Los términos padre, hijo y hermano se utilizan para describir las relaciones.<b
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div style="bg-black" class="col-lg-6">&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body onload="checkCookies()"&gt;<br>
-
-&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
-
-&lt;p id="demo"&gt;&lt;/p&gt;<br>
-
-&lt;script&gt;<br>
-function checkCookies() {<br>
-  var text = "";<br>
-  if (navigator.cookieEnabled == true) {<br>
-    text = "Cookies are enabled.";<br>
-  } else {<br>
-    text = "Cookies are not enabled.";<br>
-  }<br>
-  document.getElementById("demo").innerHTML = text;<br>
-}<br>
-&lt;/script&gt;<br>
-
-&lt;/body&gt;<br>
-&lt;/html&gt; <br>
+<img src="img/7.gif" border="1px" height="250px" width="100%"/>
 </div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Los eventos onload y onunload</h4>
-                                    <p class="mb-0 text-white-50">Los eventos onloady onunloadse activan cuando el usuario entra o sale de la página.<br>
+                                    <h4 class="text-white">Nodos secundarios y valores de nodos</h4>
+                                    <p class="mb-0 text-white-50">Un error común en el procesamiento de DOM es esperar que un nodo de elemento contenga texto.<br>El nodo del elemento (en el ejemplo anterior) no contiene texto.
 
-El onloadevento se puede utilizar para comprobar el tipo de navegador y la versión del navegador del visitante, y cargar la versión adecuada de la página web en función de la información.<br>
+Contiene un nodo de texto con el valor "Tutorial DOM".
+
+Se puede acceder al valor del nodo de texto mediante la innerHTMLpropiedad del nodo:<br>
 
 Los eventos onloady onunloadse pueden utilizar para tratar con las cookies.</p>
 <h2>COPIE EL CODIGO HE INTENTELO USTED MISMO</h2>
@@ -165,18 +141,17 @@ Los eventos onloady onunloadse pueden utilizar para tratar con las cookies.</p>
                 <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6">&lt;!DOCTYPE html&gt;<br>
+&lt;!DOCTYPE html&gt;<br>
 &lt;html&gt;<br>
 &lt;body&gt;<br>
 
-&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
-Enter your name: &lt;input type="text" id="fname" onchange="upperCase()"&gt;<br>
-&lt;p&gt;When you leave the input field, a function is triggered which transforms the input text to upper case.&lt;/p&gt;<br>
+&lt;h2&gt;JavaScript HTMLDOM&lt;/h2&gt;<br>
+&lt;p&gt;Displaying document.body&lt;/p&gt;<br>
+
+&lt;p id="demo"&gt;&lt;/p&gt;<br>
 
 &lt;script&gt;<br>
-function upperCase() {<br>
-  const x = document.getElementById("fname");<br>
-  x.value = x.value.toUpperCase();<br>
-}<br>
+document.getElementById("demo").innerHTML = document.body.innerHTML;<br>
 &lt;/script&gt;<br>
 
 &lt;/body&gt;<br>
@@ -187,13 +162,17 @@ function upperCase() {<br>
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">El evento onchange</h4>
+                                    <h4 class="text-white">La propiedad nodeValue</h4>
                                     <p class="mb-0 text-white-50" align="center">
-                                        El onchangeevento se usa a menudo en combinación con la validación de campos de entrada.
+                                        ELa nodeValuepropiedad especifica el valor de un nodo.<br>
 
-A continuación se muestra un ejemplo de cómo utilizar onchange. La upperCase() función se llamará cuando un usuario cambie el contenido de un campo de entrada.
-
-Ejemplo
+nodeValue para nodos de elementos esnull<br>
+nodeValue para nodos de texto es el texto mismo<br>
+nodeValue para los nodos de atributo es el valor del atributo<br>
+                                    </p>
+                                    <h4 class="text-white">La propiedad de tipo de nodo</h4>
+                                     <p class="mb-0 text-white-50" align="center">
+                                La nodeTypepropiedad es de solo lectura. Devuelve el tipo de un nodo.
                                     </p>
                                    
  <a href="tri2/index.html">
