@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JavaScript HTML DOM Navegación</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">REGERESAR</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">JavaScript HTML DOM Navegación</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Con HTML DOM, puede navegar por el árbol de nodos utilizando relaciones de nodos.</h2>
+                        <a class="btn btn-primary" href="#about">INICIAR</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Nodos DOM</h2>
+                        <p class="text-white-50">
+                         De acuerdo con el estándar W3C HTML DOM, todo en un documento HTML es un nodo:
+<ul class="list-group">
+  <li class="list-group-item active">Todo el documento es un nodo de documento.</li>
+  <li class="list-group-item">Cada elemento HTML es un nodo de elemento</li>
+  <li class="list-group-item">El texto dentro de los elementos HTML son nodos de texto.</li>
+  <li class="list-group-item">Cada atributo HTML es un nodo de atributo (obsoleto)</li>
+  <li class="list-group-item">Cuando se cambia un campo de entrada</li>
+    <li class="list-group-item">Todos los comentarios son nodos de comentarios.
+</li>
+    
+</ul>
+
+</p>
+<img class="img-fluid" src="img/6.gif" alt="...">
+                    </div>
+                </div>
+               
+                <a href="tri7/index.html">
+                <button type="button" class="btn btn-secondary btn-lg btn-block">EJEMPLO</button>
+            </a>
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-2 mb-lg-4 align-items-center">
+                    <div class="col-xl-8 col-lg-7">
+                        &lt;!DOCTYPE html&gt;
+&lt;html&gt; <br>
+&lt;body&gt;<br>
+
+&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
+&lt;p&gt;Click "Try it" to execute the displayDate() function.&lt;/p&gt;<br>
+
+&lt;button id="myBtn"&gt;Try it&lt;/button&gt;<br>
+
+&lt;p id="demo"&gt;&lt;/p&gt;<br>
+
+&lt;script&gt;<br>
+document.getElementById("myBtn").onclick = displayDate;<br>
+
+function displayDate() {<br>
+  document.getElementById("demo").innerHTML = Date();<br>
+}<br>
+&lt;/script&gt;<br>
+
+&lt;/body&gt;<br>
+&lt;/html&gt; <br>
+
+
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Relaciones de nodo</h4>
+                            <p class="text-black-50 mb-0">Los nodos del árbol de nodos tienen una relación jerárquica entre sí.
+
+Los términos padre, hijo y hermano se utilizan para describir las relaciones.<br>Asigne un evento onclick a un elemento de botón: </p>
+                            <h2>COPIE EL CODIGO HE INTENTELO USTED MISMO</h2>
+                             <a href="tri2/index.html">
+                <button type="button" class="btn btn-secondary btn-lg btn-block">INTENTALO TU MISMO!!!</button>
+            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div style="bg-black" class="col-lg-6">&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;body onload="checkCookies()"&gt;<br>
+
+&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
+
+&lt;p id="demo"&gt;&lt;/p&gt;<br>
+
+&lt;script&gt;<br>
+function checkCookies() {<br>
+  var text = "";<br>
+  if (navigator.cookieEnabled == true) {<br>
+    text = "Cookies are enabled.";<br>
+  } else {<br>
+    text = "Cookies are not enabled.";<br>
+  }<br>
+  document.getElementById("demo").innerHTML = text;<br>
+}<br>
+&lt;/script&gt;<br>
+
+&lt;/body&gt;<br>
+&lt;/html&gt; <br>
+</div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Los eventos onload y onunload</h4>
+                                    <p class="mb-0 text-white-50">Los eventos onloady onunloadse activan cuando el usuario entra o sale de la página.<br>
+
+El onloadevento se puede utilizar para comprobar el tipo de navegador y la versión del navegador del visitante, y cargar la versión adecuada de la página web en función de la información.<br>
+
+Los eventos onloady onunloadse pueden utilizar para tratar con las cookies.</p>
+<h2>COPIE EL CODIGO HE INTENTELO USTED MISMO</h2>
+                             <a href="tri2/index.html">
+                <button type="button" class="btn btn-secondary btn-lg btn-block">INTENTALO TU MISMO!!!</button>
+            </a>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6">&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+
+&lt;h2&gt;JavaScript HTML Events&lt;/h2&gt;<br>
+Enter your name: &lt;input type="text" id="fname" onchange="upperCase()"&gt;<br>
+&lt;p&gt;When you leave the input field, a function is triggered which transforms the input text to upper case.&lt;/p&gt;<br>
+
+&lt;script&gt;<br>
+function upperCase() {<br>
+  const x = document.getElementById("fname");<br>
+  x.value = x.value.toUpperCase();<br>
+}<br>
+&lt;/script&gt;<br>
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+</div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">El evento onchange</h4>
+                                    <p class="mb-0 text-white-50" align="center">
+                                        El onchangeevento se usa a menudo en combinación con la validación de campos de entrada.
+
+A continuación se muestra un ejemplo de cómo utilizar onchange. La upperCase() función se llamará cuando un usuario cambie el contenido de un campo de entrada.
+
+Ejemplo
+                                    </p>
+                                   
+ <a href="tri2/index.html">
+                <button type="button" class="btn btn-secondary btn-lg btn-block">INTENTALO TU MISMO!!!</button>
+            </a>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                   
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                                              </div>
+                    </div>
+                 
+                    </div>
+                  
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
